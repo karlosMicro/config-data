@@ -25,3 +25,7 @@ spring:
           uri: lb://categoria-service
           predicates:
             - Path=/api/categorias/**
+        - id: marcaAsistencia-service
+          uri: lb://marcaAsistencia-service
+          predicates:
+            - Path=/api/asistencias/**
