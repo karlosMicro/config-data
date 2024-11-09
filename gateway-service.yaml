@@ -21,3 +21,7 @@ spring:
           uri: lb://empleado-service
           predicates:
            - Path=/api/empleados/**
+        - id: categoria-service
+          uri: lb://categoria-service
+          predicates:
+            - Path=/api/categorias/**
