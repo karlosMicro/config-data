@@ -33,3 +33,7 @@ spring:
           uri: lb://horasExtras-service
           predicates:
             - Path=/api/horas-extras/**
+        - id: justificativo-service
+          uri: lb://justificativo-service
+          predicates:
+            - Path=/api/justificativos/**
