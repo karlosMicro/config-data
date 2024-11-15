@@ -16,11 +16,7 @@ spring:
       discovery:
         locator:
           enabled: true
-      globalcors:
-        cors-configurations:
-          '[/**]': # Aplica CORS a todas las rutas
-            allowedOrigins: # Permite cualquier origen
-              - "*"
+
      
       routes:
         - id: empleado-service
