@@ -16,20 +16,6 @@ spring:
       discovery:
         locator:
           enabled: true
-      globalcors:
-        cors-configurations:
-          '[/**]': # Aplica CORS a todas las rutas
-            allowedOrigins: # Permite cualquier origen
-              - "*"
-            allowedMethods: # Permite todos los métodos HTTP
-              - "GET"
-              - "POST"
-              - "PUT"
-              - "DELETE"
-              - "OPTIONS"
-            allowedHeaders: # Permite todos los encabezados
-              - "*"
-            allowCredentials: false # Permitir credenciales (opcional)
       routes:
         - id: empleado-service
           uri: lb://empleado-service
