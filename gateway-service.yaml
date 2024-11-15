@@ -16,8 +16,6 @@ spring:
       discovery:
         locator:
           enabled: true
-
-     
       routes:
         - id: empleado-service
           uri: lb://empleado-service
