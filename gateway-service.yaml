@@ -29,7 +29,7 @@ spring:
               - "OPTIONS"
             allowedHeaders: # Permite todos los encabezados
               - "*"
-      
+            allowCredentials: false # Permitir credenciales (opcional)
       routes:
         - id: empleado-service
           uri: lb://empleado-service
