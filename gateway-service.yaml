@@ -1,23 +1,23 @@
-server:
-  port: 8080
-  
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      default-zone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
-
 spring:
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
-
-          
+      globalcors:
+        cors-configurations:
+          '[/**]': # Aplica CORS a todas las rutas del Gateway
+            allowedOrigins: 
+              - "http://localhost:5173" # Frontend origin
+            allowedMethods:
+              - "GET"
+              - "POST"
+              - "PUT"
+              - "DELETE"
+              - "OPTIONS"
+            allowedHeaders:
+              - "*" # Permitir todos los encabezados
+            allowCredentials: false # Si manejas cookies o credenciales
       routes:
         - id: empleado-service
           uri: lb://empleado-service
