@@ -42,4 +42,4 @@ spring:
         - id: planillaDeSueldos-service
           uri: lb://planillaDeSueldos-service
           predicates:
-            - Path=/api/planillaDeSueldos/**
+            - Path=/api/planillas-sueldos/**
