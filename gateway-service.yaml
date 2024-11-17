@@ -39,3 +39,7 @@ spring:
           uri: lb://justificativo-service
           predicates:
             - Path=/api/justificativos/**
+        - id: planillaDeSueldos-service
+          uri: lb://planillaDeSueldos-service
+          predicates:
+            - Path=/api/planillaDeSueldos/**
