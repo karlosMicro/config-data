@@ -8,7 +8,7 @@ spring:
         cors-configurations:
           '[/**]': # Aplica CORS a todas las rutas del Gateway
             allowedOrigins: 
-              - "http://localhost:5173" # Frontend origin
+              - "*" # Frontend origin
             allowedMethods:
               - "GET"
               - "POST"
