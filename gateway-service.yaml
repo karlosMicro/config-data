@@ -11,6 +11,8 @@ eureka:
     hostname: gateway-service  # Cambia "localhost" por el hostname lógico del servicio en el clúster
 
 spring:
+  application:
+    name: gateway-service # Nombre del servicio registrado en Eureka
   cloud:
     gateway:
       discovery:
