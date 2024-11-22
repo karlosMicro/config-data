@@ -1,6 +1,6 @@
 server:
   port: 8080
-
+  
 eureka:
   client:
     fetch-registry: true # Habilita la obtención del registro de servicios desde Eureka
@@ -9,6 +9,7 @@ eureka:
       default-zone: http://eureka-service:8761/eureka/ # URL del servidor Eureka en el clúster de Kubernetes
   instance:
     hostname: gateway-service  # Cambia "localhost" por el hostname lógico del servicio en el clúster
+    prefer-ip-address: true
 
 spring:
   cloud:
