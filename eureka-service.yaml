@@ -1,8 +1,13 @@
 server:
   port: 8761
+
 eureka:
   client:
-    fetch-registry: false
-    register-with-eureka: false
+    fetch-registry: false # No descarga el registro de otros nodos (solo nodo único)
+    register-with-eureka: false # No se registra en sí mismo
     service-url: 
-      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      default-zone: "" # No es necesario definir un nodo par en un entorno con un solo servidor
+  instance:
+    hostname: eureka-service # Hostname único para identificar el servidor
+  server:
+    enable-self-preservation: false # Opcional: desactiva preservación automática en pruebas o entornos de desarrollo
