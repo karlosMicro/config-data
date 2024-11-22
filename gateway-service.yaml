@@ -6,7 +6,7 @@ eureka:
     fetch-registry: true # Habilita la obtención del registro de servicios desde Eureka
     register-with-eureka: true # Registra este servicio en Eureka
     service-url:
-      default-zone: "http://eureka-service:8761/eureka" # URL del servidor Eureka en el clúster de Kubernetes
+      default-zone: "http://eureka-service.default.svc.cluster.local:8761/eureka/" # URL del servidor Eureka en el clúster de Kubernetes
   instance:
     hostname: gateway-service  # Cambia "localhost" por el hostname lógico del servicio en el clúster
 
