@@ -1,6 +1,5 @@
 server:
   port: 8080
-
 eureka:
   client:
     fetch-registry: true # Habilita la obtención del registro de servicios desde Eureka
@@ -11,8 +10,6 @@ eureka:
     hostname: gateway-service  # Cambia "localhost" por el hostname lógico del servicio en el clúster
 
 spring:
-  application:
-    name: gateway-service # Nombre del servicio registrado en Eureka
   cloud:
     gateway:
       discovery:
