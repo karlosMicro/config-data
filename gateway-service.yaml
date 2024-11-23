@@ -8,6 +8,3 @@ eureka:
       default-zone: http://eureka-service:8761/eureka/ # URL del servidor Eureka en el clúster de Kubernetes
  instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-spring:
-  profiles:
-    active: dev
