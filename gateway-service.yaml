@@ -9,3 +9,9 @@ eureka:
       default-zone: http://eureka-service:8761/eureka
   instance:
     hostname: gateway-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
