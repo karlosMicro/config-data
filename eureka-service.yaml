@@ -8,4 +8,4 @@ eureka:
   instance:
     hostname: eureka-service
   server:
-    enable-self-preservation: false 
+    enable-self-preservation: true 
