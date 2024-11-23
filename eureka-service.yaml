@@ -3,11 +3,9 @@ server:
 
 eureka:
   client:
-    fetch-registry: false # No descarga el registro de otros nodos (solo nodo único)
-    register-with-eureka: false # No se registra en sí mismo
-    service-url: 
-      default-zone: "" # No es necesario definir un nodo par en un entorno con un solo servidor
+    fetch-registry: false 
+    register-with-eureka: false 
   instance:
-    hostname: eureka-service # Hostname único para identificar el servidor
+    hostname: eureka-service
   server:
-    enable-self-preservation: false # Opcional: desactiva preservación automática en pruebas o entornos de desarrollo
+    enable-self-preservation: false 
