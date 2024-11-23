@@ -1,17 +1,58 @@
 server:
   port: 8080
-  
+
 eureka:
   client:
     fetch-registry: true
-    register-with-eureka: true
+    register-with-eureka: true 
     service-url:
-      default-zone: http://eureka-service:8761/eureka
+      default-zone: "http://eureka-service:8761/eureka"
   instance:
     hostname: gateway-service
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+    prefer-ip-address: false 
+    
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true 
+      globalcors:
+        cors-configurations:
+          '[/**]': 
+            allowedOrigins: 
+              - "*" 
+            allowedMethods:
+              - "GET"
+              - "POST"
+              - "PUT"
+              - "DELETE"
+              - "OPTIONS"
+            allowedHeaders:
+              - "*" 
+            allowCredentials: false 
+      routes:
+        - id: empleado-service
+          uri: lb://empleado-service 
+          predicates:
+           - Path=/api/empleados/**
+        - id: categoria-service
+          uri: lb://categoria-service
+          predicates:
+            - Path=/api/categorias/**
+        - id: marcaAsistencia-service
+          uri: lb://marcaAsistencia-service 
+          predicates:
+            - Path=/api/asistencias/**
+        - id: horasExtras-service
+          uri: lb://horasExtras-service 
+          predicates:
+            - Path=/api/horas-extras/**
+        - id: justificativo-service
+          uri: lb://justificativo-service 
+          predicates:
+            - Path=/api/justificativos/**
+        - id: planillaDeSueldos-service
+          uri: lb://planillaDeSueldos-service 
+          predicates:
+            - Path=/api/planillas-sueldos/**
