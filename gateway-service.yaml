@@ -8,7 +8,7 @@ eureka:
     service-url:
       default-zone: http://eureka-service:8761/eureka/ # URL del servidor Eureka en el clúster de Kubernetes
   instance:
-    hostname: gateway-service  # Cambia "localhost" por el hostname lógico del servicio en el clúster
+    hostname: eureka-service  # Cambia "localhost" por el hostname lógico del servicio en el clúster
     prefer-ip-address: true
 
 spring:
