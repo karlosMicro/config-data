@@ -2,14 +2,17 @@ server:
   port: 8080
 
 eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true 
-    service-url:
-      default-zone: http://eureka-service:8761/eureka/
   instance:
-    hostname: gateway-service
-    prefer-ip-address: false 
+    hostname: gateway-service   
+    prefer-ip-address: false
+  client:
+    register-with-eureka: true 
+    fetch-registry: true    
+    service-url:
+      default-zone: http://eureka-service:8761/eureka/ 
+    healthcheck:
+      enabled: true 
+
     
 spring:
   cloud:
