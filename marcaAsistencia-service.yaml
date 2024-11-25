@@ -7,5 +7,5 @@ eureka:
     service-url:
       defaultZone: http://eureka-service:8761/eureka/ 
   instance:
-    hostname: marcaAsistencia-service
-    instance-id: marcaAsistencia-service
+    hostname: marcaasistencia-service
+    instance-id: marcaasistencia-service
