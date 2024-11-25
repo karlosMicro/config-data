@@ -40,8 +40,8 @@ spring:
           uri: lb://categoria-service
           predicates:
             - Path=/api/categorias/**
-        - id: marcaAsistencia-service
-          uri: lb://marcaAsistencia-service 
+        - id: marcaasistencia-service
+          uri: lb://marcaasistencia-service 
           predicates:
             - Path=/api/asistencias/**
         - id: horasExtras-service
@@ -52,7 +52,7 @@ spring:
           uri: lb://justificativo-service 
           predicates:
             - Path=/api/justificativos/**
-        - id: planillaDeSueldos-service
-          uri: lb://planillaDeSueldos-service 
+        - id: planilladesueldos-service
+          uri: lb://planilladesueldos-service 
           predicates:
             - Path=/api/planillas-sueldos/**
