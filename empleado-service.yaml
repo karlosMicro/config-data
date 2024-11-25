@@ -8,4 +8,4 @@ eureka:
       defaultZone: http://eureka-service:8761/eureka/ 
   instance:
     hostname: empleado-service
-    instance-id: empleado-service:${HOSTNAME}:${random.value}
+    instance-id: empleado-service:${HOSTNAME}:${server.port}
