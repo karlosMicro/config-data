@@ -44,8 +44,8 @@ spring:
           uri: lb://marcaasistencia-service 
           predicates:
             - Path=/api/asistencias/**
-        - id: horasExtras-service
-          uri: lb://horasExtras-service 
+        - id: horasextras-service
+          uri: lb://horasextras-service 
           predicates:
             - Path=/api/horas-extras/**
         - id: justificativo-service
