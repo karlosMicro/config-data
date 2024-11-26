@@ -44,15 +44,15 @@ spring:
           uri: lb://asistencia-service
           predicates:
             - Path=/api/asistencias/**
-        - id: horasextras-service
-          uri: lb://horasextras-service
+        - id: extras-service
+          uri: lb://extras-service
           predicates:
             - Path=/api/horas-extras/**
         - id: justificativo-service
           uri: lb://justificativo-service
           predicates:
             - Path=/api/justificativos/**
-        - id: planilladesueldos-service
-          uri: lb://planilladesueldos-service 
+        - id: planilla-service
+          uri: lb://planilla-service 
           predicates:
             - Path=/api/planillas-sueldos/**
