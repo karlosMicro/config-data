@@ -33,23 +33,23 @@ spring:
             allowCredentials: false 
       routes:
         - id: empleado-service
-          uri: lb://empleado-service 
+          uri: lb://empleado-service
           predicates:
            - Path=/api/empleados/**
         - id: categoria-service
           uri: lb://categoria-service
           predicates:
             - Path=/api/categorias/**
-        - id: marcaasistencia-service
-          uri: lb://marcaasistencia-service 
+        - id: asistencia-service
+          uri: lb://asistencia-service
           predicates:
             - Path=/api/asistencias/**
         - id: horasextras-service
-          uri: lb://horasextras-service 
+          uri: lb://horasextras-service
           predicates:
             - Path=/api/horas-extras/**
         - id: justificativo-service
-          uri: lb://justificativo-service 
+          uri: lb://justificativo-service
           predicates:
             - Path=/api/justificativos/**
         - id: planilladesueldos-service
