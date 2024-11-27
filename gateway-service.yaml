@@ -56,7 +56,4 @@ spring:
           uri: lb://planilla-service
           predicates:
             - Path=/api/planillas-sueldos/**
-        - id: gateway-service
-          uri: lb://gateway-service
-              predicates:
-            - Path=/gateway-service/**
+
