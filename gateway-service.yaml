@@ -21,7 +21,7 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins:
-              - "*"
+              - "http://frontend-service:80"
             allowedMethods:
               - "GET"
               - "POST"
