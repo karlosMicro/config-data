@@ -22,6 +22,7 @@ spring:
           '[/**]':
             allowedOrigins:
               - "http://frontend-service:80"
+              - "http://localhost:30020"
             allowedMethods:
               - "GET"
               - "POST"
